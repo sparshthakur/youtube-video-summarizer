@@ -50,15 +50,14 @@ A Langchain framework project that extracts YouTube transcripts (manual or auto-
    
    This will open a local web app in your browser.
 
-🧠 What You Can Do in the App:
-   -Input a YouTube video ID
-   -Add the start and end time.
-   -Fetch its transcript (manual or auto-generated)
-   -Get a summary of the transcript segment
+## 🧠 What You Can Do in the App:
+      -Input a YouTube video URL.
+      -Add the start and end time.
+      -Get a summary of the YouTube video segment.
 
 ---
 
-🙌 Acknowledgments
+## 🙌 Acknowledgments
    [LangChain](https://github.com/langchain-ai/langchain)
    [Streamlit](https://streamlit.io/)
    [YouTube Transcript API](https://github.com/jdepoix/youtube-transcript-api)
