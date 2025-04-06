@@ -1,5 +1,5 @@
 from agents.summarizing_agent import summ_agent
-from agents.tools import fetch_transcript_all,timestamp_to_seconds,seconds_to_timestamp
+from agents.tools import fetch_transcript_all,timestamp_to_seconds,seconds_to_timestamp,get_ytb_transcript
 import streamlit as st
 
 if __name__=="__main__":
@@ -11,7 +11,8 @@ if __name__=="__main__":
 
     if ytb_url:
         try:
-            transcript = fetch_transcript_all.invoke({"video_url": ytb_url})
+            transcript = fetch_transcript_all(ytb_url)
+            print(transcript)
             video_duration = int(transcript[-1]["start"] + transcript[-1]["duration"])
             st.info(f"Estimated video duration: {seconds_to_timestamp(video_duration)}")
             
@@ -35,10 +36,11 @@ if __name__=="__main__":
                 else:
                     if st.button("Get Summary"):
                         st.caption(f"Extracting transcript from {start_time}s to {end_time}s")
-                        transcript = summ_agent(youtube_url= ytb_url,start_time=start_time, end_time=end_time)
+                        transcript_segment = get_ytb_transcript(transcript=transcript,start_time= start_time, end_time=end_time)
+                        summary= summ_agent(transcript=transcript_segment)
                         st.success("Transcript segment fetched successfully!")
                         st.subheader("📝 Transcript Summary")
-                        st.write(transcript["output"])
+                        st.write(summary.content)
             except ValueError as e:
                 st.error(f"❌ Invalid timestamp: {e}")
         except Exception as e:
