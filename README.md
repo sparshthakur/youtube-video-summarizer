@@ -30,36 +30,36 @@ A Langchain framework project that extracts YouTube transcripts (manual or auto-
    cd langchain-transcript-extractor
 
 2. Create and activate a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # or venv\Scripts\activate on Windows
 
 3. Install dependencies:
-```bash
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
 ## ⚙️ Environment Variables
-Create a .env file in the root directory and include the following:
-You can use .env.example as a starting point.
+   Create a .env file in the root directory and include the following:
+   You can use .env.example as a starting point.
 
 ---
 
 ## 🧪 Usage
-▶️ Run the Streamlit app:
-streamlit run app.py
-
-This will open a local web app in your browser.
+   ▶️ Run the Streamlit app:
+   streamlit run app.py
+   
+   This will open a local web app in your browser.
 
 🧠 What You Can Do in the App:
--Input a YouTube video ID
--Add the start and end time.
--Fetch its transcript (manual or auto-generated)
--Get a summary of the transcript segment
+   -Input a YouTube video ID
+   -Add the start and end time.
+   -Fetch its transcript (manual or auto-generated)
+   -Get a summary of the transcript segment
 
 ---
 
 🙌 Acknowledgments
-[LangChain](https://github.com/langchain-ai/langchain)
-[Streamlit](https://streamlit.io/)
-[YouTube Transcript API](https://github.com/jdepoix/youtube-transcript-api)
-[OpenAI](https://openai.com/)
+   [LangChain](https://github.com/langchain-ai/langchain)
+   [Streamlit](https://streamlit.io/)
+   [YouTube Transcript API](https://github.com/jdepoix/youtube-transcript-api)
+   [OpenAI](https://openai.com/)
