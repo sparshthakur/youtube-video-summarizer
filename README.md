@@ -50,9 +50,9 @@ A Langchain framework project that extracts YouTube transcripts (manual or auto-
    This will open a local web app in your browser.
 
 ## 🧠 What You Can Do in the App:
-   -Input a YouTube video URL.
-   -Add the start and end time.
-   -Get a summary of the YouTube video segment.
+      - Input a YouTube video URL.
+      - Add the start and end time.
+      - Get a summary of the YouTube video segment.
 
 ---
 
